@@ -15,6 +15,9 @@
             <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
             <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
             <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+            <div class=" justif-aling">
+              <%= button_to "log out", destroy_user_session_path, method: :delete, class: "rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" %>
+            </div>
           </div>
         <% end %>
         </div>
@@ -31,9 +34,6 @@
               </div>
               <input id="search" name="search" class="block w-full rounded-md border-0 bg-gray-700 py-1.5 pl-10 pr-3 text-gray-300 placeholder:text-gray-400 focus:bg-white focus:text-gray-900 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Search" type="search">
             </div>
-          </div>
-          <div class="m-2 justif-aling">
-            <%= button_to "log out", destroy_user_session_path, method: :delete, class: "text-white" %>
           </div>
         </div>
         <div class="flex lg:hidden">
