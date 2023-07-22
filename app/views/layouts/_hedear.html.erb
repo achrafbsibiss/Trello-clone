@@ -11,6 +11,7 @@
         <% if user_signed_in? %>
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+
             <%= link_to "Dashboar", root_path, class: "rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" %>
             <div class=" justif-aling">
               <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" %>
