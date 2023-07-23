@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#index"
   get "/dashboard", to: "dashboard#index"
-  resources :boards, only: [:new, :create]
+  resources :boards
 end
