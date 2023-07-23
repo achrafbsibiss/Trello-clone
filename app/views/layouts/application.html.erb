@@ -10,8 +10,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="bg-gray-200">
     <%= render "layouts/hedear"%>
-    <%= yield %>
+    <div>
+      <%= yield %>
+    </div>
   </body>
 </html>
