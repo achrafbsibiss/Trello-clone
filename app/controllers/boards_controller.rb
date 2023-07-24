@@ -21,6 +21,7 @@ class BoardsController < ApplicationController
   end
 
   def update
+    authorize @board
     if @board.update(board_parms)
       redirect_to root_path
     else
@@ -29,6 +30,7 @@ class BoardsController < ApplicationController
   end
 
   def destroy
+    authorize @board
     if @board.destroy
       redirect_to root_path
     end
