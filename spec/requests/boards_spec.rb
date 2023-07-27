@@ -68,15 +68,14 @@ RSpec.describe 'Boards', type: :request do
   end
 
   describe 'PATCH /update' do
-
-    context "with valid params" do
+    context 'with valid params' do
       before do
         patch board_path(id: board.id), params: {board: valid_attributes}
       end
 
-      it "update the requets board" do
+      it 'update the requets board' do
         board.reload
-        expect(board.name).to eq("New Title")
+        expect(board.name).to eq('New Title')
       end
 
       it 'successfully updates expense' do
@@ -102,7 +101,11 @@ RSpec.describe 'Boards', type: :request do
       delete board_path(id: board.id)
     end
 
-    it 'destroy the announcement' do
+    it 'destroy the board' do
+      expect(Board.count).to eq(0)
+    end
+
+    it 'destroy the board' do
       expect(response).to have_http_status(:redirect)
     end
   end
