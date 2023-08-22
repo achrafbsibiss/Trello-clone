@@ -2,16 +2,63 @@ import { Controller } from '@hotwired/stimulus'
 
 export default class extends Controller {
     connect() {
-        console.log(jKanban)
-      console.log('hello worlld from board')
+      const boards =[
+        {
+            "id"    : "board-id-1",
+            "title" : "To DO",
+            "class" : "bg-red-700, text-white",
+            "item"  : [
+                {
+                    "id"      : "item-id-1",
+                    "title"   : "Item 1",
+                    "username": "username1"
+                },
+                {
+                    "id"      : "item-id-2",
+                    "title"   : "Item 2",
+                    "username": "username2"
+                }
+            ]
+        },
+
+        {
+            "id"    : "board-id-2",
+            "title" : "Work IN",
+            "class" : "bg-blue-700, text-white",
+            "item"  : [
+                {
+                    "id"      : "item-id-1",
+                    "title"   : "Item 1",
+                    "username": "username1"
+                },
+                {
+                    "id"      : "item-id-2",
+                    "title"   : "Item 2",
+                    "username": "username2"
+                }
+            ]
+        },
+        {
+            "id"    : "board-id-3",
+            "title" : "finish",
+            "class" : "bg-green-700, text-white",
+            "item"  : [
+                {
+                    "id"      : "item-id-1",
+                    "title"   : "Item 1",
+                    "username": "username1"
+                },
+                {
+                    "id"      : "item-id-2",
+                    "title"   : "Item 2",
+                    "username": "username2"
+                }
+            ]
+        }
+      ]
       var kanban = new jKanban({
         element          : '#board',                                           // selector of the kanban container
-        gutter           : '15px',                                       // gutter of the board
-        widthBoard       : '250px',                                      // width of the board
-        responsivePercentage: false,                                    // if it is true I use percentage in the width of the boards and it is not necessary gutter and widthBoard
-        dragItems        : true,                                         // if false, all items are not draggable
-        boards           : [],                                           // json of boards
-        dragBoards       : true,                                         // the boards are draggable, if false only item can be dragged
+        boards           : boards,                                           // json of boards
         itemAddOptions: {
             enabled: false,                                              // add a button to board for easy item creation
             content: '+',                                                // text or html content of the board button   
