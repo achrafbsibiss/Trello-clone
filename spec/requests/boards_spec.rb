@@ -33,6 +33,12 @@ RSpec.describe 'Boards', type: :request do
     end
   end
 
+  describe "GET/show" do
+    it "renders a successful response" do
+      get board_path(id: board.id)
+    end
+  end
+
   describe 'POST /creat' do
     context 'with valid params' do
       before do
