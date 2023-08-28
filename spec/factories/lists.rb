@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :list do
-    board { nil }
-    title { "MyString" }
-    class_list { "MyString" }
+    board
+    title { Faker::Lorem.word }
+    class_list { Faker::Lorem.word}
   end
 end
