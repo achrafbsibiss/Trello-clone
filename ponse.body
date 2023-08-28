@@ -1,0 +1,13 @@
+
+[1mFrom:[0m /home/achraf/Trello-clone/spec/requests/api/lists_spec.rb:12 :
+
+     [1;34m7[0m: 
+     [1;34m8[0m:   describe [31m[1;31m"[0m[31mGET /index[1;31m"[0m[31m[0m [32mdo[0m
+     [1;34m9[0m:     it [31m[1;31m"[0m[31msucceds[1;31m"[0m[31m[0m [32mdo[0m
+    [1;34m10[0m:       get api_board_lists_path(board)
+    [1;34m11[0m:       expect(response).to  be_successful
+ => [1;34m12[0m:       binding.pry
+    [1;34m13[0m:     [32mend[0m
+    [1;34m14[0m:   [32mend[0m
+    [1;34m15[0m: [32mend[0m
+
