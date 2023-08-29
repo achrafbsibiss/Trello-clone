@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: Trello_clone_production
-  username: Trello_clone
+  username: achraf
   password: <%= ENV["TRELLO_CLONE_DATABASE_PASSWORD"] %>
